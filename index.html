@@ -1,15 +1,134 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Maryam Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maryam | Portfolio</title>
   <style>
-    body {font-family: Arial; text-align:center; margin-top:50px;}
-    h1 {color:#333;}
+    :root { --max: 980px; }
+    body { margin:0; font-family: Arial, sans-serif; color:#111; background:#fff; line-height:1.6; }
+    header { padding:40px 16px 10px; border-bottom:1px solid #eee; }
+    .wrap { max-width: var(--max); margin: 0 auto; }
+    h1 { margin:0 0 8px; font-size: 34px; }
+    .subtitle { margin:0; color:#444; }
+    nav { margin-top:14px; display:flex; gap:14px; flex-wrap:wrap; }
+    nav a { color:#111; text-decoration:none; padding:8px 10px; border:1px solid #eee; border-radius:10px; }
+    nav a:hover { border-color:#bbb; }
+    section { padding:28px 16px; }
+    h2 { font-size:22px; margin:0 0 10px; }
+    .grid { display:grid; grid-template-columns: 1fr; gap:12px; }
+    @media (min-width: 760px) { .grid { grid-template-columns: 1fr 1fr; } }
+    .card { border:1px solid #eee; border-radius:16px; padding:16px; }
+    .tag { display:inline-block; border:1px solid #eee; border-radius:999px; padding:6px 10px; margin:6px 6px 0 0; font-size:14px; }
+    .muted { color:#555; }
+    .btn { display:inline-block; margin-top:10px; padding:10px 12px; border-radius:12px; border:1px solid #111; text-decoration:none; color:#111; }
+    footer { padding:26px 16px; border-top:1px solid #eee; color:#555; }
+    .small { font-size:14px; }
   </style>
 </head>
-
 <body>
-  <h1>Hello, I'm Maryam</h1>
-  <p>Web Developer | WordPress | HTML | CSS | JavaScript</p>
+  <header>
+    <div class="wrap">
+      <h1>Maryam Mohammadrezaei</h1>
+      <p class="subtitle">Web / Frontend Developer • WordPress • HTML • CSS • JavaScript • Ottawa</p>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="wrap">
+      <h2>About</h2>
+      <p class="muted">
+        I’m a Computer Engineering (Hardware) graduate with hands-on experience building responsive websites.
+        I enjoy creating clean UI, improving performance, and turning ideas into working products.
+      </p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <h2>Skills</h2>
+      <div>
+        <span class="tag">WordPress</span>
+        <span class="tag">Elementor</span>
+        <span class="tag">HTML5</span>
+        <span class="tag">CSS3</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">Responsive Design</span>
+        <span class="tag">Basic SEO</span>
+        <span class="tag">Git / GitHub</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <h2>Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <h3 style="margin:0 0 6px;">Portfolio Website</h3>
+          <p class="muted" style="margin:0;">
+            A responsive single-page portfolio built with HTML/CSS.
+          </p>
+          <a class="btn" href="#" onclick="alert('Later we will add real links here!'); return false;">View</a>
+        </div>
+
+        <div class="card">
+          <h3 style="margin:0 0 6px;">JavaScript Mini Project</h3>
+          <p class="muted" style="margin:0;">
+            A small JavaScript project (form validation / calculator / todo).
+          </p>
+          <a class="btn" href="#" onclick="alert('Next step: we will create this repo and link it.'); return false;">View</a>
+        </div>
+
+        <div class="card">
+          <h3 style="margin:0 0 6px;">WordPress Business Site</h3>
+          <p class="muted" style="margin:0;">
+            A WordPress website built with Elementor + custom CSS.
+          </p>
+          <a class="btn" href="#" onclick="alert('If you have a real site link, we can put it here.'); return false;">View</a>
+        </div>
+
+        <div class="card">
+          <h3 style="margin:0 0 6px;">Landing Page</h3>
+          <p class="muted" style="margin:0;">
+            A clean landing page focused on conversion and performance.
+          </p>
+          <a class="btn" href="#" onclick="alert('Next step: we will add your real landing page.'); return false;">View</a>
+        </div>
+      </div>
+      <p class="small muted" style="margin-top:14px;">
+        (Next: we’ll replace the “View” buttons with real links to your projects.)
+      </p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <p class="muted" style="margin:0 0 10px;">
+        Email me and I’ll respond quickly.
+      </p>
+      <a class="btn" href="mailto:YOUR_EMAIL_HERE">YOUR_EMAIL_HERE</a>
+      <p class="small muted" style="margin-top:10px;">
+        Add: LinkedIn • GitHub
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap small">
+      © <span id="y"></span> Maryam • Built with GitHub Pages
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
